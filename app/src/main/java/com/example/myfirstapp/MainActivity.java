@@ -21,4 +21,23 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
+    public void singleTopMode(View view) {
+        Intent intent = new Intent(this, DifferentLaunchMode.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        startActivity(intent);
+    }
+    public void standardMode(View view) {
+        Intent intent = new Intent(this, DifferentLaunchMode.class);
+        startActivity(intent);
+    }
+    public void singleTaskMode(View view) {
+        Intent intent = new Intent(this, DifferentLaunchMode.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
+    public void singleInstanceMode(View view) {
+        Intent intent = new Intent(this, DifferentLaunchMode.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+    }
 }

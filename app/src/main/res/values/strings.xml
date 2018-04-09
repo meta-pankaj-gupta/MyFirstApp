@@ -2,4 +2,9 @@
     <string name="app_name">My First App</string>
     <string name="edit_message">Enter a message</string>
     <string name="button_send">Send</string>
+    <string name="title_activity_different_launch_mode">DifferentLaunchMode</string>
+    <string name="standardLaunch">LAUNCH STANDARD</string>
+    <string name="singleTopLaunch">LAUNCH SINGLETOP</string>
+    <string name="singletaskLaunch">LAUNCH SINGLETASK</string>
+    <string name="singleInstanceLaunch">LAUNCH SINGLEINSTANCE</string>
 </resources>
