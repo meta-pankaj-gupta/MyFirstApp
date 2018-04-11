@@ -7,4 +7,5 @@
     <string name="singleTopLaunch">LAUNCH SINGLETOP</string>
     <string name="singletaskLaunch">LAUNCH SINGLETASK</string>
     <string name="singleInstanceLaunch">LAUNCH SINGLEINSTANCE</string>
+    <string name="action_settings">Settings</string>
 </resources>

@@ -3,13 +3,16 @@ package com.example.myfirstapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
+    private final String LOG_TAG = "Main Activity";
     public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.i(LOG_TAG, "onCreate main Method");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
@@ -27,7 +30,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void standardMode(View view) {
+        Log.i(LOG_TAG, "standard Method");
         Intent intent = new Intent(this, DifferentLaunchMode.class);
+        Log.i(LOG_TAG, "intent Created");
         startActivity(intent);
     }
     public void singleTaskMode(View view) {
