@@ -18,6 +18,7 @@ public class FragmentB extends Fragment implements View.OnClickListener {
     private IFragmentToActivity mCallback;
     private TextView mTextView1;
     private Button btnFtoA;
+    private TextView txtData;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -25,6 +26,8 @@ public class FragmentB extends Fragment implements View.OnClickListener {
         mTextView1 = (TextView) view.findViewById(R.id.textView5);
         btnFtoA = (Button) view.findViewById(R.id.button11);
         btnFtoA.setOnClickListener(this);
+
+        txtData = (TextView)view.findViewById(R.id.txtData);
         return view;
     }
 
@@ -62,5 +65,10 @@ public class FragmentB extends Fragment implements View.OnClickListener {
                 mCallback.showToast("Call From FragmentB");
                 break;
         }
+    }
+
+    protected void displayReceivedData(String message)
+    {
+        txtData.setText("Data received: "+message);
     }
 }

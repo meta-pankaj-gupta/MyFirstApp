@@ -14,7 +14,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 
-public class DifferentLaunchMode extends AppCompatActivity implements IFragmentToActivity{
+public class DifferentLaunchMode extends AppCompatActivity implements IFragmentToActivity, SendMessage{
     private final String LOG_TAG = "Fragment Activity";
     private PagerAdapter adapter;
     private TabLayout tabLayout;
@@ -78,6 +78,16 @@ public class DifferentLaunchMode extends AppCompatActivity implements IFragmentT
         if (fragment != null) {
             fragment.fragmentCommunication();
         } else {
+            Log.i(LOG_TAG, "Fragment 2 is not initialized");
+        }
+    }
+
+    @Override
+    public void sendData(String message) {
+        FragmentB fragment = (FragmentB) adapter.getFragment(1);
+        if (fragment != null) {
+            fragment.displayReceivedData(message);
+        }else {
             Log.i(LOG_TAG, "Fragment 2 is not initialized");
         }
     }

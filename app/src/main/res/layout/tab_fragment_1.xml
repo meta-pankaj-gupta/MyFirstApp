@@ -11,9 +11,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/button7"
-        android:layout_marginLeft="18dp"
-        android:layout_marginStart="18dp"
+        android:layout_below="@+id/btnPassData"
+        android:layout_marginTop="19dp"
         app:srcCompat="@drawable/image_new" />
 
     <TextView
@@ -30,18 +29,44 @@
         android:id="@+id/button11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/textView6"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:text="Fragment to Activity"/>
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="14dp"
+        android:text="Fragment to Activity" />
 
     <Button
         android:id="@+id/button7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button11"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:text="Fragment to Fragment 2"/>
+        android:layout_alignBaseline="@+id/button11"
+        android:layout_alignBottom="@+id/button11"
+        android:layout_marginLeft="6dp"
+        android:layout_marginStart="6dp"
+        android:layout_toEndOf="@+id/button11"
+        android:layout_toRightOf="@+id/button11"
+        android:text="Fragment to Fragment 2" />
+
+    <EditText
+        android:id="@+id/inMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/button7"
+        android:layout_marginTop="16dp"
+        android:hint="Enter here" />
+
+    <Button
+        android:id="@+id/btnPassData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button7"
+        android:layout_alignStart="@+id/button7"
+        android:layout_below="@+id/button7"
+        android:layout_marginTop="84dp"
+        android:text="PASS DATA TO FRAGMENT 2" />
 
 </RelativeLayout>
