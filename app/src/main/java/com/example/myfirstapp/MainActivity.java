@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
+
     public void singleTopMode(View view) {
         Intent intent = new Intent(this, DifferentLaunchMode.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
@@ -45,4 +46,15 @@ public class MainActivity extends AppCompatActivity {
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
+    /** Called when the user taps the recycleView button */
+    public void recycleView(View view) {
+        Intent intent = new Intent(this, ReclycleViewExample.class);
+        startActivity(intent);
+    }
+    /** Called when the user taps the recycleView button */
+    public void weatherApp(View view) {
+        Intent intent = new Intent(this, WeatherApp.class);
+        startActivity(intent);
+    }
+
 }
